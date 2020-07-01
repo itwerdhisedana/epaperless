@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^tracking$ index.php?op=tracking [L]
+RewriteRule ^keluar$ index.php?op=out [L]
+RewriteRule ^login$ index.php?op=login [L]
+
+# serve custom error pages
+ErrorDocument 400 /404.php
+ErrorDocument 401 /404.php
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /404.php
+
+</IfModule>
